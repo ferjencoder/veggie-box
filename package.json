@@ -3,6 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "description": "VeggieBox is a meal subscription service application built with React. It offers users the ability to choose from a variety of meal options and delivers the necessary ingredients right to their doorsteps. The application facilitates healthy and convenient cooking by providing all necessary ingredients, nutritional values, suggested cooking steps, and even supporting videos. VeggieBox aims to save users time and effort, enabling more focus on the joy of cooking and eating.",
+  "main": "vite.config.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ferjencoder/veggie-box"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -33,12 +39,6 @@
     "sass": "^1.62.1",
     "vite": "^4.3.9"
   },
-  "main": "vite.config.js",
-  "repository": {
-    "type": "git",
-    "url": "veggiebox"
-  },
   "author": "ferJen",
-  "license": "ISC",
-  "description": ""
+  "license": "ISC"
 }
