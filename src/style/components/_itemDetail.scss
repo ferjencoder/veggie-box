@@ -1,0 +1,55 @@
+// DETAIL
+.detail-hero__container {
+	position: relative;
+}
+
+.detail-hero__card {
+	align-items: center;
+	width: 100rem;
+	background-color: rgb(255, 255, 255);
+	position: absolute;
+	box-shadow: $shdw-dark;
+	top: 85%;
+}
+
+.detail-hero__heading {
+	font-family: $ff-logo-heavy;
+	font-size: 4rem;
+}
+.hero-line-divider {
+	width: 10rem;
+	height: 0.1rem;
+	background-color: rgb(128, 128, 128);
+}
+
+.detail-hero__subtxt {
+	display: flex;
+	font-size: 1.8rem;
+	text-align: center;
+	margin-top: 3rem;
+	justify-content: center;
+	color: rgb(91, 91, 91);
+	align-items: flex-end;
+	font-weight: 400;
+}
+
+.detail-table--header {
+	font-size: 2rem;
+}
+
+.detail-hero__description {
+	font-size: 2rem;
+	font-family: $ff-primary;
+	line-height: 1.5em;
+	padding-left: 2rem;
+}
+
+.row-divider {
+	height: 9rem;
+}
+.detail-hero__recipe {
+	display: flex;
+	width: 100rem;
+	justify-content: center;
+	align-content: center;
+}

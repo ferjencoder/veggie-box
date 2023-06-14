@@ -1,0 +1,73 @@
+@font-face {
+	font-family: cotoris;
+	src: url(https://res.cloudinary.com/ferjen/raw/upload/v1670112776/veggieBox/fonts/Cotoris_tteky6.woff) format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: cotoris bold;
+	src: url(https://res.cloudinary.com/ferjen/raw/upload/v1670112776/veggieBox/fonts/CotorisBold_tpizfe.woff) format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: cotoris bolder;
+	src: url(https://res.cloudinary.com/ferjen/raw/upload/v1670112776/veggieBox/fonts/CotorisHeavy_vbnbrx.woff) format('woff');
+	font-display: swap;
+}
+
+// COLORS
+$clr-green-dark: #4f8206;
+$clr-green-light: #a1d168;
+$clr-magenta: #fe54ac;
+$clr-orange-dark: #f75f48;
+$clr-orange-light: #f79432;
+$clr-yellow: #ffd500;
+// FONTS
+$ff-logo: 'Cotoris';
+$ff-logo-bold: 'cotoris bold';
+$ff-logo-heavy: 'cotoris bolder';
+$ff-primary: 'Hind Vadodara', sans-serif;
+$ff-secondary: 'Reenie Beanie', cursive;
+// SHADOWS
+$shdw-light: 0 2.5px 7.5px rgba(0, 0, 0, 0.06);
+$shdw-dark: 0 5px 15px rgba(0, 0, 0, 0.2);
+// TRANSITIONS / SPACING / RADIUS
+$transition: all 0.3s linear;
+$spacing: 0.1rem;
+$radius: 0.25rem;
+
+// BTN MODIFIED
+$btn-font-size: 1.5rem;
+$btn-border-radius: 0;
+$btn-border-radius-sm: 0;
+$btn-border-radius-lg: 0;
+
+//BOOT
+$success: #a1d168; //light
+$primary: #4f8206; //vegano
+$danger: #f75f48; //keto
+$warning: $clr-yellow; //sin gluten
+$info: $clr-orange-light; //vegetariano
+
+.bg-dk-green {
+	background-color: $clr-green-dark;
+}
+
+.btn-primary {
+	box-shadow: none;
+	background-color: #4f8206;
+}
+
+.btn {
+	box-shadow: none;
+	font-size: 2rem;
+}
+
+$primary: $clr-green-dark;
+
+@import '../node_modules/bootstrap/scss/bootstrap';
+
+td {
+	font-size: 1.3rem;
+}

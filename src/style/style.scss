@@ -1,0 +1,36 @@
+@font-face {
+	font-family: cotoris;
+	src: url(https://res.cloudinary.com/ferjen/raw/upload/v1670112776/veggieBox/fonts/Cotoris_tteky6.woff) format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: cotoris bold;
+	src: url(https://res.cloudinary.com/ferjen/raw/upload/v1670112776/veggieBox/fonts/CotorisBold_tpizfe.woff) format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: cotoris bolder;
+	src: url(https://res.cloudinary.com/ferjen/raw/upload/v1670112776/veggieBox/fonts/CotorisHeavy_vbnbrx.woff) format('woff');
+	font-display: swap;
+}
+
+
+/* ABSTRACT */
+@import './abstract/variables';
+
+/* BASE */
+@import './base/reset';
+@import './base/typography';
+
+/* COMPONENTS */
+@import './components/card';
+@import './components/components';
+@import './components/itemDetail';
+@import './components/modal';
+@import './components/navbar';
+@import './components/spinner';
+
+/* PAGES */
+@import './pages/landingPage';

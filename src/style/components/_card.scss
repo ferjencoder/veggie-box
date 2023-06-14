@@ -1,0 +1,73 @@
+// CARDS
+
+.card {
+  width: 36rem;
+  height: 38rem;
+  margin: 2rem;
+  border-radius: 0;
+  box-shadow: $shdw-light;
+
+  &:hover {
+    box-shadow: $shdw-dark;
+    transition: all 500ms ease-in-out;
+    transform: scale(110%);
+  }
+}
+
+.card--header {
+  font-family: $ff-primary;
+  font-size: 2rem;
+  margin-top: 1rem;
+  color: black;
+}
+
+.card--text {
+  font-size: 1.4rem;
+  text-align: start;
+  margin: 0;
+  width: inherit;
+  color: black;
+}
+
+.card--text__subtxt {
+  display: flex;
+  font-size: 1.3rem;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 2rem;
+  width: max-content;
+  color: black;
+}
+
+.card--image {
+  // position: relative;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.card--tag {
+  position: absolute;
+  background-color: $clr-orange-dark;
+  color: white;
+  display: block;
+  font-size: 1.2rem;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  padding: 0.25em 1em;
+  text-transform: uppercase;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.card--button {
+  border: 0;
+  display: block;
+  // width: 100%;
+  background-color: $clr-green-light;
+  margin: 0;
+  justify-content: center;
+  text-transform: uppercase;
+  color: black;
+}

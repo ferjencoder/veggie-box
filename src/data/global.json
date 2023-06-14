@@ -1,0 +1,12 @@
+{
+    "alert": {
+        "mgs1": "Su compra fue realizada con éxito. Gracias por comprar en VeggieBox!",
+        "btn": "close"
+    },
+    "cart": {
+        "title": "TU CARRITO",
+        "msg1": "Aun no has agregado items a tu carrito",
+        "msg2": "Seguir comprando"
+    },
+    "cartWidget": " productos en el carrito"
+}
