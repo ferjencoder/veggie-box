@@ -2,11 +2,22 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Col, Container, Table, Row } from 'react-bootstrap';
 
-import { CartItem, handleCartContext, priceInARS } from '../Cart';
+import { CartItem, EmptyCartMessage, handleCartContext, priceInARS } from '../Cart';
 import { Alert } from '../Alert';
 import db from '../../utils/firebaseConfig';
 import { getFirestore, serverTimestamp } from 'firebase/firestore';
 
+
+// Function to create an order
+const createOrder = ( order ) => {
+	const db = getFirestore();
+	const ordersList = collection( db, 'orders' );
+	addDoc( ordersList, order )
+		.then( ( { id } ) => console.log( id ) )
+		.catch( console.log );
+};
+
+// Main Cart component
 export const Cart = () => {
 	const { cartList, removeAllItemsFromCart, totalItemPrice } = handleCartContext();
 	const [ show, setShow ] = useState( false );
@@ -46,45 +57,13 @@ export const Cart = () => {
 
 	const handleShow = () => setShow( true );
 
-	const createOrder = () => {
-		const db = getFirestore();
-		const ordersList = collection( db, 'orders' );
-		addDoc( ordersList, order )
-			.then( ( { id } ) => console.log( id ) )
-			.catch( ( err ) => console.log( err ) );
-	};
 
+	// If cart is empty, display the empty cart message
 	if ( cartList.length === 0 ) {
-
-		return (
-
-			<Container className='mt-5 px-5'>
-				<Row className='px-5'>
-					<Col className='px-5'>
-						<Table>
-							<thead>
-								<tr>
-									<th>TU CARRITO</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td className='border-0'>
-										<h4 className='mt-5 pt-2 pb-5'>Aun no has agregado items a tu carrito</h4>
-										<hr />
-										<Link to={'/sanslfiltre'}>
-											<Button className='card--button mt-5 px-5'>Seguir comprando</Button>
-										</Link>
-									</td>
-								</tr>
-							</tbody>
-						</Table>
-					</Col>
-				</Row>
-			</Container>
-		);
+		return <EmptyCartMessage />;
 	}
 
+	// If cart is not empty, display the cart items
 	return (
 
 		<Container className='mt-5'>
@@ -136,18 +115,25 @@ export const Cart = () => {
 							</tr>
 							<tr>
 								<td colSpan={2} className='border-0'>
-									{/* *************************************************************************** */}
-									<Button onClick={handleShow} className='card--button d-flex' style={{ width: '100%' }}>
+
+									<Button
+										onClick={handleShow}
+										className='card--button d-flex'
+										style={{ width: '100%' }}
+									>
 										Finalizar Compra
 									</Button>
-									{/* *************************************************************************** */}
 
 									<Alert show={show} handleClose={handleClose} />
 								</td>
 							</tr>
 							<tr>
 								<td colSpan={2} className='border-0'>
-									<Button onClick={() => removeAllItemsFromCart()} className='card--button d-flex' style={{ width: '100%' }}>
+									<Button
+										onClick={() => removeAllItemsFromCart()}
+										className='card--button d-flex'
+										style={{ width: '100%' }}
+									>
 										Eliminar Carrito
 									</Button>
 								</td>
